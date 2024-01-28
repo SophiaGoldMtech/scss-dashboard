@@ -1,0 +1,441 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.bg-500 {
+  background: linear-gradient(140deg, #12463F, #367C63);
+  color: #fff;
+}
+
+.bg-400 {
+  background-color: #FDBF4B;
+}
+.bg-400::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: url("/images/128595-flying-airplane-vector-picture-free-clipart-hq.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  --webkit-transform: $property;
+  --ms-transform: $property;
+  transform: rotate(-18deg);
+}
+
+.bg-600 {
+  background-color: #AD9FA5;
+}
+
+.bg-700 {
+  background-color: #EAEEE2;
+  color: #000;
+}
+
+.bg-800 {
+  background-color: #C9BAAA;
+  color: #000;
+  z-index: -2;
+  position: relative;
+  overflow: hidden;
+}
+.bg-800::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/the-image-features-a-breathtaking-view-of-realistic-and-highly-detailed-mountains-displayed-against-a-transparent-background-making-it-suitable-for-various-projects-and-designs-generative-ai-png.webp");
+  background-size: 150% 120%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  --webkit-transform: $property;
+  --ms-transform: $property;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: -50px;
+  right: 0px;
+}
+
+.flipped {
+  --webkit-transform: $property;
+  --ms-transform: $property;
+  transform: scaleX(-1);
+}
+
+.top-left {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.top-right {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.bottom-right:not(button) {
+  bottom: 100px;
+  right: 75px;
+}
+
+.mountains {
+  --webkit-transform: $property;
+  --ms-transform: $property;
+  transform: scaleX(-1);
+  height: 800px;
+  width: 100%;
+  max-width: 1720px;
+  z-index: -1;
+  background-image: url("../images/gray_mountains_ii_display.jpg");
+  background-position: 130% 100%;
+  box-shadow: 0 0 100px 60px black inset;
+  filter: brightness(50%);
+  border-radius: 10%;
+  position: absolute;
+  top: 400px;
+  left: -1100px;
+  background-repeat: no-repeat;
+}
+
+.spacing {
+  margin: 40px 80px 0 80px;
+}
+
+.explore .review-container, .main, .try, .nav-bar, .wander, .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  text-transform: uppercase;
+}
+
+.logo {
+  --l-width: 3rem;
+  --l-height: 2.25rem;
+  background-color: #FDBF4B;
+  width: var(--l-width);
+  height: var(--l-height);
+  border-radius: 12px;
+  position: relative;
+}
+.logo::before, .logo::after {
+  content: "";
+  background-color: #000;
+  width: calc(0.25 * var(--l-width));
+  height: calc(0.33 * var(--l-height));
+  position: absolute;
+  left: 25%;
+}
+.logo::after {
+  bottom: 0;
+  left: 50%;
+}
+
+.wanderWord {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.nav-bar {
+  list-style-type: none;
+}
+.nav-bar li {
+  padding: 0 40px;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.save-btn {
+  border-radius: 50%;
+  padding: 10px 13px;
+  font-size: 1.3125rem;
+  margin-left: 20px;
+  background-color: #fff;
+}
+
+.try-app {
+  font-size: 1.125rem;
+}
+
+.main {
+  align-items: start;
+}
+
+.explore {
+  width: 36%;
+  margin-top: 30px;
+  position: relative;
+  height: 100vh;
+}
+.explore-container {
+  max-width: 450px;
+}
+.explore-container h1 {
+  font-size: 5.25rem;
+  line-height: 1.1;
+}
+.explore-container > p {
+  color: #afb2b4;
+  font-size: 1.3125rem;
+}
+.explore .review-container {
+  position: absolute;
+  bottom: 40px;
+  gap: 10px;
+}
+.explore .review-container .review {
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  max-width: 12ch;
+}
+
+.pic {
+  background-color: #fff;
+  width: 42px;
+  height: 6px;
+  display: inline-block;
+  position: relative;
+}
+.pic::before, .pic::after {
+  content: "";
+  background-color: #fff;
+  height: 1rem;
+  aspect-ratio: 1;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+.pic::before {
+  left: 0;
+  bottom: -5px;
+}
+.pic::after {
+  right: 0;
+  height: 1.25rem;
+  bottom: -7px;
+  border-radius: 6px;
+}
+
+.guide {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.125rem;
+  color: #f9f9f9;
+}
+
+.icon {
+  background-color: #383636;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.icon * {
+  margin: 0;
+  padding: 0;
+}
+
+.tall {
+  height: 100px;
+}
+
+.round {
+  font-size: 1.5rem;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+.star-review i {
+  color: #FDBF4B;
+}
+.star-review p {
+  font-size: 1.3125rem;
+}
+
+.profile-picture i {
+  font-size: 2.25rem;
+}
+
+.widgets {
+  flex: 1;
+}
+.widgets .widget-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.widget {
+  --w-height: 250px;
+  --w-width: 50%;
+  border-radius: 30px;
+  height: var(--w-height);
+  width: var(--w-width);
+  position: relative;
+}
+.widget.large {
+  --w-width: 100%;
+  height: calc(var(--w-height) * 2);
+}
+.widget.small {
+  --w-width: calc(50% - 10px);
+}
+.widget .fa-shield {
+  font-size: 7rem;
+}
+.widget h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  max-width: 20ch;
+}
+.widget p:not(.large p) {
+  margin: 0;
+  margin-bottom: -20px;
+  font-size: 1.2rem;
+}
+.widget p:not(.large p).big {
+  font-size: 5.25rem;
+  margin: 0;
+}
+.widget button {
+  background-color: #000;
+  border-radius: 100rem;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  font-size: 1.2rem;
+  border: 2px solid #000;
+  cursor: pointer;
+  z-index: 999;
+}
+.widget button.large {
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1999;
+}
+.widget .big-pin {
+  color: #000;
+  font-size: 9.45rem;
+}
+.widget .small-pin {
+  font-size: 2rem;
+  top: 40%;
+  left: 20%;
+}
+.widget .widget-title {
+  font-size: 1.5rem !important;
+  max-width: 13ch;
+  padding: 8px 0 0 12px;
+  font-weight: 600;
+}
+
+ul.dash {
+  list-style: none;
+  margin-left: 0.5em;
+  padding-left: 1em;
+  font-size: 1.3125rem;
+  color: #383636;
+  line-height: 1.7;
+}
+
+ul.dash > li:before {
+  display: inline-block;
+  content: "—";
+  width: 1em;
+  margin-left: -0.5em;
+  margin-right: 0.5em;
+}
+
+.outline {
+  background-color: inherit !important;
+  color: #000 !important;
+}
+
+.accent {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.new-places {
+  margin-right: -50px;
+}
+.new-places p {
+  color: #383636;
+}
+
+.crest {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.crest .fa-shield {
+  color: #000;
+  position: absolute;
+}
+.crest .fa-shield .a {
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.side-bar {
+  width: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+.side-bar p {
+  font-size: 1.3125rem;
+  color: #afb2b4;
+  margin-top: 10px;
+}
+.side-bar .icon-container, .side-bar .icon-container > .container {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orange {
+  background-color: #FA7B33;
+  color: #fff;
+  position: fixed;
+  bottom: 50px;
+  right: 0px;
+}/*# sourceMappingURL=style.css.map */
