@@ -494,3 +494,88 @@ ul.dash > li:before {
     bottom: 50px;
     right: 0px;
 }
+
+@media screen and (max-width: 1175px) {
+    .spacing {
+      padding: 0;
+      margin: 10px;
+    }
+  
+    body {
+      width: 587px;
+      padding: 0;
+      margin: 0;
+      overflow: scroll;
+      box-sizing: border-box;
+    }
+    
+    
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    
+    .widgets {
+        width: 100%;
+    }
+    
+    .icon {
+        display: flex;
+    }
+    
+    .side-bar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .icon-container, .icon-container > .container {
+        padding: 0;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row !important;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+
+        .icon {
+            padding: 10px;
+            margin: 0;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            padding: 10px;
+            margin: 0;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    
+    .orange {
+        padding: 25px;
+        margin-top: 50px;
+    }
+
+    .review-container, .star-review, .profile-picture, .review {
+        display: none;
+    }
+}
