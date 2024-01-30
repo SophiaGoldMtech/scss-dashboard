@@ -440,7 +440,7 @@ ul.dash > li:before {
   right: 0px;
 }
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1120px) {
   .spacing {
     padding: 0;
     margin: 10px;
@@ -451,6 +451,12 @@ ul.dash > li:before {
     margin: 0;
     overflow: scroll;
     box-sizing: border-box;
+  }
+  .mountains {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    background-position: 0 0;
   }
   .nav-bar {
     display: flex;
